@@ -1,5 +1,5 @@
 import express from "express";
-import "./utils/loadEnv.cjs"
+import "./src/utils/loadEnv.cjs"
 
 const app = express();
 const port = process.env.PORT || 4444;
