@@ -4,8 +4,12 @@
   "description": "",
   "main": "./src/server.js",
   "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server.js",
     "start:dev": "set NODE_ENV=development && nodemon ./src/server.js",
     "start:prod": "set NODE_ENV=production && nodemon ./src/server.js"
   },
