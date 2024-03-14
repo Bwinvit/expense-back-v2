@@ -4,6 +4,9 @@ import "./utils/loadEnv.cjs"
 const app = express();
 const port = process.env.PORT || 4444;
 
+app.get("/", (req, res) => {
+    res.send("APIs Running!");
+});
 app.get("/home", (req, res) => {
     res.send("Hello World!");
 });
