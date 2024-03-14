@@ -1,0 +1,21 @@
+{
+  "name": "expense-back-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "set NODE_ENV=development && nodemon ./src/server.js",
+    "start:prod": "set NODE_ENV=production && nodemon ./src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "express": "^4.18.3",
+    "nodemon": "^3.1.0"
+  }
+}
