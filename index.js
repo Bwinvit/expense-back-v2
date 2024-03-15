@@ -1,18 +1,12 @@
-import express from "express";
+import express from 'express';
+
+import { CONFIG } from './src/configs/index.js';
+
+const { PORT, POSTGRES_URL } = CONFIG;
 
 const app = express();
-const PORT = 4000;
+const port = PORT || 3000;
 
-app.get("/", (req, res) => {
-  res.send("Hey this is my API running 🥳");
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
-
-app.get("/about", (req, res) => {
-  res.send("This is my about route..... ");
-});
-
-app.listen(PORT, () => {
-  console.log(`API listening on PORT ${PORT} `);
-});
-
-export default app;
