@@ -1,7 +1,9 @@
 const express = require("express");
+const { injectSpeedInsights } = require("@vercel/speed-insights")
 
 const app = express();
 const PORT = 4000;
+injectSpeedInsights()
 
 app.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `);
@@ -15,5 +17,4 @@ app.get("/about", (req, res) => {
   res.send("This is my about route..... ");
 });
 
-// Export the Express API
 module.exports = app;
