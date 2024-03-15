@@ -1,13 +1,7 @@
 import express from "express";
-import { injectSpeedInsights } from "@vercel/speed-insights";
 
 const app = express();
 const PORT = 4000;
-injectSpeedInsights();
-
-app.listen(PORT, () => {
-  console.log(`API listening on PORT ${PORT} `);
-});
 
 app.get("/", (req, res) => {
   res.send("Hey this is my API running 🥳");
@@ -15,6 +9,10 @@ app.get("/", (req, res) => {
 
 app.get("/about", (req, res) => {
   res.send("This is my about route..... ");
+});
+
+app.listen(PORT, () => {
+  console.log(`API listening on PORT ${PORT} `);
 });
 
 export default app;
